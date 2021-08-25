@@ -79,19 +79,19 @@ def load_data(city, month, day):
     return df
 
 def showing_data(df):
+	
     """asking user to showing first 5 rows of data"""
-    q = 0 
-    qeustion = str(input("would you want to view first 5 rows from data ? \"yes\" or \"no\"\n")).lower()
-    
+    q = 0     
     while True :
-                if qeustion == "yes" :
-                    print("the first 5 rows :\n",df[q:q+5])
-                    qeustion = str(input("would you want to view next 5 rows from data ? \"yes\" or \"no\"\n")).lower()
-                    q += 5
-                elif qeustion == "no" :
-                    break
-                print("invalid choice, please try again.")
-    
+	qeustion = str(input("would you want to view next 5 rows from data ? \"yes\" or \"no\"\n")).lower()
+	if qeustion == "yes" :
+	    print("the first 5 rows :\n",df[q:q+5])
+	    q += 5
+	elif qeustion == "no" :
+	    break
+	else : 
+	    print("invalid choice, please try again.")
+
         
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
